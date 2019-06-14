@@ -1,0 +1,74 @@
+status-xtc:
+    for repo in $(XTC); do (@cd ${CONTRIB}/; pwd; git status; echo "----------";); done
+
+status-codex:
+    for repo in $(CDX); do (@cd ${CUSTOM}/; pwd; git status; echo "----------";); done
+
+status-theme:
+    for repo in $(THEME); do (@cd ${THEME}/; pwd; git status; echo "----------";); done
+
+status-other:
+    for repo in $(OTHER); do (@cd ${PROJ_ROOT}/; pwd; git status; echo "----------";); done
+
+status-all:
+	make status-xtc
+	make status-codex
+	make status-theme
+	make status-other
+
+
+fetch-xtc:
+    for repo in $(XTC); do (@cd ${CONTRIB}/; pwd; git fetch; echo "----------";); done
+
+fetch-codex:
+    for repo in $(CDX); do (@cd ${CUSTOM}/; pwd; git fetch; echo "----------";); done
+
+fetch-theme:
+    for repo in $(THEME); do (@cd ${THEME}/; pwd; git fetch; echo "----------";); done
+
+fetch-other:
+    for repo in $(OTHER); do (@cd ${PROJ_ROOT}/; pwd; git fetch; echo "----------";); done
+
+fetch-all:
+	make fetch-xtc
+	make fetch-codex
+	make fetch-theme
+	make fetch-other
+
+
+pull-xtc:
+    for repo in $(XTC); do (@cd ${CONTRIB}/; pwd; git pull; echo "----------";); done
+
+pull-codex:
+    for repo in $(CDX); do (@cd ${CUSTOM}/; pwd; git pull; echo "----------";); done
+
+pull-theme:
+    for repo in $(THEME); do (@cd ${THEME}/; pwd; git pull; echo "----------";); done
+
+pull-other:
+    for repo in $(OTHER); do (@cd ${PROJ_ROOT}/; pwd; git pull; echo "----------";); done
+
+pull-all:
+	make pull-xtc
+	make pull-codex
+	make pull-theme
+	make pull-other
+
+
+branch-xtc:
+    for repo in $(XTC); do (@cd ${CONTRIB}/; pwd; git branch; echo "----------";); done
+
+branch-codex:
+    for repo in $(CDX); do (@cd ${CUSTOM}/; pwd; git branch; echo "----------";); done
+
+branch-theme:
+    for repo in $(THEME); do (@cd ${THEME}/; pwd; git branch; echo "----------";); done
+
+branch-other:
+    for repo in $(OTHER); do (@cd ${PROJ_ROOT}/; pwd; git branch; echo "----------";); done
+
+branch-all:
+	make branch-xtc
+	make branch-codex
+	make branch-theme
+	make branch-other

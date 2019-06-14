@@ -1,0 +1,21 @@
+# Override default settings in the generated settings.local.php.
+settings:
+  db_base:
+    env: 'DATABASE_NAME'
+  db_user:
+    env: 'DATABASE_USER'
+  db_pass:
+    env: 'DATABASE_PASSWORD'
+  db_host:
+    env: 'DATABASE_HOST'
+  db_driver:
+    env: 'DATABASE_DRIVER'
+  db_port: 5432
+  hash_salt: 'A4h16tcoH-b8ttx5YWIl7-trNNjXrDAkDNVExKo8gNofgmYkbdfahMOAcf-iL4ZT89n2OfB-A'
+
+# Overrides the services and parameters in default/services.yml.
+service_overrides:
+  parameters:
+    session.storage.options:
+      cookie_domain:
+        replace_env: D8_COOKIE_DOMAIN

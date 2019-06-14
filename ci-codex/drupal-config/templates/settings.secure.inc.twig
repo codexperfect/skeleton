@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Drupal environment specific secure configuration file.
+ *
+ * Access to this file MUST be forbidden to all.
+ * This file MUST NOT be versioned.
+ */
+
+/**
+ * Environment unique name.
+ */
+define('ENVIRONMENT_NAME', getenv('ENVIRONMENT') ?: 'local');
+
+/**
+ * Salt for one-time login links and cancel links, form tokens, etc.
+ */
+$settings['hash_salt'] = {{hash_salt}};
+
+/**
+ * Database settings.
+ */
+$databases['default']['default'] = array (
+  'database'  => {{db_base}},
+  'username'  => {{db_user}},
+  'password'  => {{db_pass}},
+  'host'      => {{db_host}},
+  'port'      => {{db_port}},
+  'driver'    => {{db_driver}},
+  'prefix'    => '',
+  'collation' => 'utf8mb4_general_ci',
+);

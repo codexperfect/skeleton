@@ -1,0 +1,34 @@
+{
+	"name": "codexperfect/ci-templates",
+	"type": "project",
+	"description": "A collection of templates to init CI tools.",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Alexandre Israël",
+      "homepage": "https://codexperfect.com"
+    }
+  ],
+  "extra": {
+    "local-settings": {
+      "src-settings": "drupal-config",
+      "fragment": "templates/settings_extra.php",
+      "templates": [
+        {
+          "template": "templates/settings.local.template.php.twig",
+          "dest": "settings.local.php"
+        },
+        {
+          "template": "templates/settings.secure.inc.twig",
+          "dest": "settings.secure.inc"
+        }
+      ],
+      "values": "settings.local.values.yml"
+    },
+    "patches": {
+      "drupal/iframe": {
+        "Add script widget and formatter": "https://www.drupal.org/files/issues/2018-10-01/iframe-script_widget_and_formatter-3003466-3-D8.patch"
+      }
+    }
+  }
+}
