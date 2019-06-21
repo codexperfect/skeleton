@@ -1,4 +1,4 @@
-include Makefile.vars
+#include Makefile.vars
 
 composer.json:
 	@echo "*** INIT COMPOSER ***"

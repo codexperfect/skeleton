@@ -2,6 +2,10 @@
 sites/*/*settings*.php
 sites/example.sites.php
 
+# vendors
+vendor
+web
+
 # Ignore paths that contain generated content.
 files/
 sites/*/files
